@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+
+@model Movies.Client.Models.UserInfoViewModel
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Claim Type</td>
+            <td>Claim Value</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.UserInfoDictionary){
+            <tr>
+                <td>@item.Key</td>
+                <td>@item.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>
