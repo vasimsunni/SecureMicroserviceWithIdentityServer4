@@ -66,8 +66,7 @@ All endpoints require a valid JWT token issued by IdentityServer and are protect
 
 To run this project, ensure you have the following installed:
 
-- .NET 6.0 SDK or later
-- Docker
+- .NET 5.0 SDK or later
 - A code editor like Visual Studio or VS Code
 - Postman or any API testing tool (optional)
 
@@ -77,8 +76,8 @@ To run this project, ensure you have the following installed:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/movies-microservices.git
-   cd movies-microservices
+   git clone https://github.com/vasimsunni/SecureMicroserviceWithIdentityServer4.git
+   cd SecureMicroserviceWithIdentityServer4
    ```
 
 2. **Build and Run Services:**
@@ -88,10 +87,10 @@ To run this project, ensure you have the following installed:
    ```
 
 3. **Access Services:**
-   - **IdentityServer**: `http://localhost:5000`
-   - **ApiGateway**: `http://localhost:7000`
-   - **Movies.API**: Accessible only through the ApiGateway.
-   - **Movies.Client**: `http://localhost:3000`
+   - **IdentityServer**: `http://localhost:5005`
+   - **ApiGateway**: `http://localhost:5010`
+   - **Movies.API**: `http://localhost:5012` (Accessible only through the ApiGateway).
+   - **Movies.Client**: `http://localhost:5001`
 
 4. **Testing the API:**
    - Use Postman or similar tools to test the `ApiGateway` endpoints.
@@ -101,12 +100,11 @@ To run this project, ensure you have the following installed:
 
 ## Technologies Used
 
-- **Backend**: .NET 6.0, IdentityServer4, ASP.NET Core
+- **Backend**: .NET 8.0, IdentityServer4, ASP.NET Core
 - **Frontend**: ASP.NET Razor Pages (Movies.Client)
 - **API Gateway**: Ocelot
 - **Authentication**: JWT Token-based
 - **Database**: Entity Framework Core with SQL Server
-- **Containerization**: Docker
 
 ---
 
@@ -126,8 +124,9 @@ To run this project, ensure you have the following installed:
 │   ├── ocelot.json
 │   └── Startup.cs
 ├── Movies.Client
-│   ├── Pages
 │   ├── wwwroot
+│   ├── Controllers
+│   ├── Views
 │   └── Startup.cs
 └── docker-compose.yml
 ```
